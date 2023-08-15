@@ -1,0 +1,740 @@
+/*Need to define our styles on a webpage*/
+
+.fintestProModal input+span {
+    margin: 0;
+}
+
+#fintestProModal {
+    z-index: 2147483647;
+}
+
+#fintestProModal div,
+#fintestProModal p,
+#fintestProModal * {
+    font-family: 'Work Sans', sans-serif !important;
+}
+
+/* The Modal (background) */
+
+.fintestProModal {
+    display: flex;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 2147483647;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content */
+
+.fintestProModal-modal-content {
+    height: fit-content;
+    max-width: 450px;
+    word-break: break-word;
+}
+
+/* Modal Content Block*/
+
+.fintestProModal-modal-content .fintestProModalBLock {
+    background-color: #fefefe;
+    border-radius: 5px;
+    overflow: hidden;
+    min-width: 400px;
+}
+
+/* The Close Button */
+
+.fintestProModal-close {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.fintestProModal-warning {
+    position: absolute;
+    top: 11px;
+    left: 15px;
+}
+
+.fintestProModal-close:hover svg path,
+.fintestProModal-close:focus svg path {
+    fill: #303030;
+}
+
+/*    CUSTOM CHECKBOXES */
+
+/* The container */
+
+.fintestProCheckbox-container {
+    font-family: initial !important;
+    font-weight: initial;
+    text-transform: initial;
+    letter-spacing: initial;
+    color: initial;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 13px;
+    line-height: 25px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.is-errors-checker .fintestProCheckbox-container {
+    padding-left: 0;
+    padding-right: 25px;
+    margin-left: 8px;
+}
+
+.is-errors-checker .fintestProCheckbox-container:has(.js-save-as-single) {
+    padding-left: 35px;
+}
+
+/* Hide the browser's default checkbox */
+
+.fintestProCheckbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+
+/* .fintestProCheckbox-container input + .fintestProCheckbox-checkmark { */
+
+.fintestProCheckbox-container .fintestProCheckbox-checkmark {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 4px;
+    box-sizing: initial !important;
+}
+
+.is-errors-checker .fintestProCheckbox-container .fintestProCheckbox-checkmark {
+    height: 18px;
+    width: 18px;
+    border-radius: 3px;
+    border: 2px solid #4B4B4B;
+    background: white;
+}
+
+.is-errors-checker .fintestProCheckbox-container:has(.js-save-as-single) .fintestProCheckbox-checkmark {
+    border: 2px solid #9D9D9D;
+    background: transparent;
+}
+
+.fintestProCheckbox-container:not(.is-errors-checker):hover input~.fintestProCheckbox-checkmark {
+    background-color: #ccc;
+}
+
+.fintestProCheckbox-container:hover input~.fintestProCheckbox-checkmark {
+    background-color: white;
+}
+
+.fintestProCheckbox-container input:checked~.fintestProCheckbox-checkmark {
+    background-color: #DC6B2F;
+}
+
+.is-errors-checker .fintestProCheckbox-container input:checked~.fintestProCheckbox-checkmark {
+    background-color: #4B4B4B;
+}
+
+.is-errors-checker .fintestProCheckbox-container:has(.js-save-as-single) input:checked~.fintestProCheckbox-checkmark {
+    background-color: #9D9D9D;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.fintestProCheckbox-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+
+.fintestProCheckbox-container input:checked~.fintestProCheckbox-checkmark:after {
+    display: block;
+}
+
+.fintestProCheckbox-container input+.fintestProCheckbox-checkmark:before {
+    all: initial !important;
+}
+
+/* Style the checkmark/indicator */
+
+.fintestProCheckbox-container input+.fintestProCheckbox-checkmark:after {
+    left: 9px !important;
+    top: 5px !important;
+    width: 5px !important;
+    height: 10px !important;
+    border: solid white !important;
+    border-width: 0 3px 3px 0 !important;
+    -webkit-transform: rotate(45deg) !important;
+    -ms-transform: rotate(45deg) !important;
+    transform: rotate(45deg) !important;
+    margin: 0 !important;
+}
+
+.is-errors-checker .fintestProCheckbox-container input+.fintestProCheckbox-checkmark:after {
+    box-sizing: content-box;
+    left: 5px !important;
+    top: 0 !important;
+    width: 6px !important;
+    height: 12px !important;
+    border-width: 0 2px 2px 0 !important;
+}
+
+.is-errors-checker .fintestProCheckbox-container:has(.js-save-as-single) input+.fintestProCheckbox-checkmark:after {
+    border: solid black !important;
+    border-width: 0 2px 2px 0 !important;
+}
+
+#ftn-modal .fintestProModalHeader,
+.fintestProModalHeader {
+    line-height: initial;
+    font-size: initial;
+    background: #D7D7D7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+#ftn-modal .fintestProModalBody,
+.fintestProModalBody {
+    gap: 10px;
+    text-align: initial;
+    padding: 28px 20px;
+    font-family: 'WorkSans', sans-serif;
+}
+
+#fintestProModal .fintestProModalBody-text * {
+    color: initial;
+    letter-spacing: 0.15px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    text-transform: none;
+}
+
+.is-error-checker .fintestProModalBody {
+    background: #F3F3F3 !important;
+    padding: 28px 0px;
+}
+
+#fintestProModal .is-error-checker .fintestProModalBody-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#fintestProModal .fintestProModalBody-text-center {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #202124;
+}
+
+.fintestProModalBody-text .header {
+    font-size: 20px;
+}
+
+.fintestProModalFooter {
+    letter-spacing: initial;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #D7D7D7;
+}
+
+.fintestProModalHeader-buttons {
+    gap: 20px;
+    padding: 0px 20px;
+    font-family: initial !important;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    width: 100%;
+}
+
+.fintestProModalFooter .cancelRecordBtn,
+.fintestProModalFooter .goBackBtn {
+    display: flex;
+    height: 50px;
+    min-width: 100px;
+    justify-content: center;
+    align-items: center;
+    color: #9D9D9D;
+    font-family: 'WorkSans', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.fintestProModalBody .trim-start {
+    height: 94px;
+    background-image: url('chrome-extension://pdnloikhmiklhhankbkbkfhmlnnkgfmk/pictures/trim-start-popup.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#fintestProModal .radioBtnListView {
+    margin-top: 15px;
+}
+
+#fintestProModal .radioBtnListView label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'WorkSans', sans-serif !important;
+}
+
+#fintestProModal .radioBtnListView label span {
+    font-family: 'WorkSans', sans-serif !important;
+}
+
+#fintestProModal .radioBtnListView input[type=radio] {
+    display: none;
+}
+
+#fintestProModal .radioBtnListView input+svg {
+    margin-right: 10px;
+}
+
+#fintestProModal .radioBtnListView input+svg path:first-child {
+    fill: #DADADA;
+}
+
+#fintestProModal .radioBtnListView input:checked+svg path {
+    fill: #DC6B2F;
+}
+
+/*Webpage compare options */
+
+#fintestProModal input[name='ft-webpage-compare-option']:disabled~span {
+    opacity: 0.5;
+}
+
+#fintestProModal .fintestWebpageBlock .radioBtnListView {
+    margin: 0;
+    font-size: 16px;
+    display: flex;
+}
+
+#fintestProModal .fintestWebpageBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.fintestWebpageBlock label {
+    all: initial;
+}
+
+.selectFintestSnapshot {
+    position: relative;
+    min-width: 200px;
+    margin: 0 !important;
+    display: block !important;
+    /*display: initial !important;*/
+    font-family: initial !important;
+    font-size: initial !important;
+    text-transform: initial !important;
+    color: initial !important;
+    letter-spacing: initial !important;
+    font-weight: initial !important;
+}
+
+.fintestProModal .selectFintestSnapshot svg {
+    position: absolute !important;
+    right: 12px;
+    top: calc(50% - 3px);
+    width: 10px;
+    height: 6px;
+    stroke-width: 2px;
+    stroke: #9098a9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    pointer-events: none;
+}
+
+.selectFintestSnapshot select {
+    font-family: 'WorkSans', sans-serif !important;
+    -webkit-appearance: none;
+    margin: 0;
+    /*display: initial;*/
+    /*width: initial;*/
+    height: initial;
+    position: initial;
+    color: initial;
+    padding: 7px 40px 7px 12px;
+    border: 1px solid #e8eaed;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    transition: all 150ms ease;
+    display: block !important;
+    width: 100%;
+}
+
+.selectFintestSnapshot select:disabled,
+.selectFintestSnapshot select:disabled+svg {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.selectFintestSnapshot select:required:invalid {
+    color: #5a667f;
+}
+
+.selectFintestSnapshot select option {
+    font-family: 'WorkSans', sans-serif !important;
+    color: #223254;
+}
+
+.selectFintestSnapshot select option[value=""][disabled] {
+    display: none;
+}
+
+.selectFintestSnapshot select:focus {
+    outline: none;
+    border-color: #07f;
+    box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+}
+
+.fintestProModal svg.sprites {
+    position: absolute !important;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+input[type="text"]:focus {
+    border-color: none;
+    box-shadow: none;
+    outline: none;
+}
+
+/*Console and network errors modal*/
+
+#fintestProModal .fintestErrorsContainer {
+    flex-direction: column;
+    padding: 0px 56px;
+}
+
+#fintestProModal .fintestFilterBlock {
+    padding: 8px 55px 0px 55px;
+}
+
+#fintestProModal .fintestInputPlusIcon {
+    cursor: pointer;
+}
+
+#fintestProModal .fintestInputPlusIcon.disabled {
+    pointer-events: none;
+}
+
+#fintestProModal .fintestInputPlusIcon.disabled svg path {
+    fill: #D7D7D7;
+}
+
+#fintestProModal .fintestInfoLabel {
+    display: none;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.4px;
+    flex: 1;
+}
+
+#fintestProModal .fintestInfoLabel.errorFintestLabel {
+    color: #CC0000 !important;
+}
+
+#fintestProModal .fintestInfoLabel.warningFintestLabel {
+    color: #FF8F00 !important;
+}
+
+#fintestProModal .fintestInputBlock {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+#fintestProModal .fintestInputBlock input {
+    margin: 0;
+    height: initial;
+    display: flex;
+    flex: 1;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #4B4B4B;
+    padding: 0;
+    box-shadow: initial;
+}
+
+#fintestProModal .fintestInputBlock input.disabled {
+    color: #D7D7D7;
+    pointer-events: none;
+}
+
+#fintestProModal .fintestInputBlock input.disabled::-webkit-input-placeholder {
+    color: #D7D7D7;
+}
+
+#fintestProModal .fintestInputBlock input::-webkit-input-placeholder {
+    color: #4B4B4B;
+}
+
+#fintestProModal .fintestInputBlock input.infoFintest::-webkit-input-placeholder {
+    color: #DC6B2F;
+}
+
+#fintestProModal .errorsStart {
+    height: fit-content;
+    padding: 18px 0px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #9D9D9D;
+}
+
+#fintestProModal .errorsStart.disabled {
+    pointer-events: none;
+    color: #D7D7D7;
+}
+
+#fintestProModal .fintestErrorsContainer,
+#fintestProModal .fintestErrorsBlock {
+    display: flex;
+    gap: 18px;
+}
+
+#fintestProModal .fintestErrorsBlock.httpErrors.hide {
+    display: none;
+}
+
+#fintestProModal .fintestErrorsIcon,
+#fintestProModal .switchFintestError,
+#fintestProModal .fintestInputPlusIcon,
+#fintestProModal .fintestKeywordDelete {
+    display: flex;
+}
+
+#fintestProModal .fintestErrorsIcon.active svg path {
+    fill: #002855
+}
+
+#fintestProModal .fintestErrorsIcon svg path {
+    fill: #7F97B1
+}
+
+#fintestProModal .fintestErrorsWraper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#fintestProModal .fintestErrorsToggle {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: end;
+}
+
+#fintestProModal .fintestErrorsLabel {
+    letter-spacing: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    display: flex;
+    align-items: center;
+    color: #7F97B1;
+}
+
+#fintestProModal .fintestErrorsLabel.active {
+    color: #002855;
+}
+
+#fintestProModal .switchFintestError input[type=checkbox] {
+    display: none;
+}
+
+#fintestProModal .switchFintestError input[type=checkbox]+label {
+    max-width: initial;
+    text-transform: initial;
+    box-sizing: initial;
+    display: inline-block;
+    background: #7F97B1;
+    border-radius: 2px;
+    width: 28px;
+    height: 14px;
+    transition: .5s;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+#fintestProModal .switchFintestError input[type=checkbox]+label::before {
+    margin: 0;
+    content: '';
+    position: absolute;
+    box-sizing: initial;
+    background: #FFFFFF !important;
+    box-shadow: 0px -2px 12px rgba(0, 0, 0, 0.04), 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 12px;
+    height: 12px;
+    border: 1px solid #FFFFFF;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+#fintestProModal .switchFintestError input[type=checkbox]:checked+label {
+    background: #002855;
+}
+
+#fintestProModal .switchFintestError input[type=checkbox]:checked+label::before {
+    margin-left: 14px;
+    box-sizing: initial;
+    width: 12px;
+    height: 12px;
+    transform: none;
+    border: 1px solid #DC6B2F !important;
+}
+
+#fintestProModal input[type=checkbox].httpErrors:before {
+    cursor: pointer;
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    border: 1px solid #7F97B1;
+    ;
+    background-color: #DADADA;
+}
+
+#fintestProModal input[type=checkbox].httpErrors:checked::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.55556 0H12.4444C13.3078 0 14 0.7 14 1.55556V12.4444C14 13.3 13.3078 14 12.4444 14H1.55556C0.692222 14 0 13.3 0 12.4444V1.55556C0 0.7 0.692222 0 1.55556 0ZM1.55556 7.00006L5.44444 10.8889L12.4444 3.88895L11.3478 2.78451L5.44444 8.68784L2.65222 5.90339L1.55556 7.00006Z" fill="rgb(0,40,85)"/></svg>');
+    border: none;
+}
+
+#fintestProModal .horizontalLine {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(157, 157, 157, 0.2) 0%, #9D9D9D 52.12%, rgba(157, 157, 157, 0.2) 100%);
+}
+
+#fintestProModal .fintestFilterBlock .horizontalLine {
+    background: #4B4B4B;
+}
+
+#fintestProModal .fintestKeywordsCount {
+    display: flex;
+    justify-content: end;
+    padding-top: 4px;
+    padding-bottom: 10px;
+    max-width: 298px;
+    align-items: center;
+}
+
+#fintestProModal .fintestKeywordsMaxCount {
+    padding-right: 8px;
+}
+
+#fintestProModal .fintestKeywordsCount * {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: #9D9D9D;
+    font-weight: 400;
+}
+
+#fintestProModal .fintestKeywordsContent {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 298px;
+}
+
+#fintestProModal .fintestKeywordBlock {
+    display: flex;
+    align-items: center;
+    padding: 4px 8px;
+    gap: 4px;
+    background: #D7D7D7;
+    border-radius: 20px;
+}
+
+#fintestProModal .fintestKeyword {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 12px;
+}
+
+#fintestProModal .fintestKeywordDelete {
+    cursor: pointer;
+}
+
+/*Console and network errors modal end*/
+
+.fintestProModalBody-text.fintestProModalBody-text-answer {
+    min-height: 300px;
+    border: 1px solid #D7D7D7;
+}
+
+@media screen and (max-width: 1200px),
+screen and (max-height: 700px) {
+    .is-error-checker .fintestProModalBody {
+        padding: 10px 0;
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+    #fintestProModal .is-error-checker .fintestProModalBody-text {
+        gap: 12px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .is-error-checker .fintestProModalBody {
+        max-height: 360px;
+    }
+}
